@@ -14,7 +14,7 @@
 		AEEC856C1F18B8C600D43B9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEC856A1F18B8C600D43B9B /* Main.storyboard */; };
 		AEEC856E1F18B8C600D43B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEEC856D1F18B8C600D43B9B /* Assets.xcassets */; };
 		AEEC85711F18B8C600D43B9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEC856F1F18B8C600D43B9B /* LaunchScreen.storyboard */; };
-		E518C76B1F7152E000AF3340 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E518C76A1F7152E000AF3340 /* Extensions.swift */; };
+		E57591981F7155DC00CAF2EB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E518C76A1F7152E000AF3340 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -148,6 +148,7 @@
 				AEEC85691F18B8C600D43B9B /* ViewController.swift in Sources */,
 				AEEC85651F18B8C600D43B9B /* AppDelegate.swift in Sources */,
 				8ECB37091F71500D00F48A4A /* Entities.swift in Sources */,
+				E57591981F7155DC00CAF2EB /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
