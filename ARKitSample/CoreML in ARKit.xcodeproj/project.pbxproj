@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3365C3DE9154C9BDA7198F38 /* Pods_CoreML_in_ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DAA3746D7794722805843E /* Pods_CoreML_in_ARKit.framework */; };
+		8E9452951F716AF600953A1A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9452941F716AF600953A1A /* NetworkService.swift */; };
 		8ECB37091F71500D00F48A4A /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB37081F71500D00F48A4A /* Entities.swift */; };
 		8ECB37111F715E3B00F48A4A /* CoordsStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB37101F715E3B00F48A4A /* CoordsStorageTests.swift */; };
 		AEEC85651F18B8C600D43B9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEC85641F18B8C600D43B9B /* AppDelegate.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		3AAF28D13DCD3EB3B72B9416 /* Pods-CoreML in ARKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreML in ARKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoreML in ARKit/Pods-CoreML in ARKit.debug.xcconfig"; sourceTree = "<group>"; };
 		4694EDD40A9D1897D9299567 /* Pods_CoreML_in_ARKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreML_in_ARKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E9452941F716AF600953A1A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		8ECB37081F71500D00F48A4A /* Entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
 		8ECB370E1F715E3B00F48A4A /* CoreML in ARKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CoreML in ARKitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ECB37101F715E3B00F48A4A /* CoordsStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordsStorageTests.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				AEEC856D1F18B8C600D43B9B /* Assets.xcassets */,
 				AEEC856F1F18B8C600D43B9B /* LaunchScreen.storyboard */,
 				AEEC85721F18B8C600D43B9B /* Info.plist */,
+				8E9452941F716AF600953A1A /* NetworkService.swift */,
 			);
 			path = "CoreML in ARKit";
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E9452951F716AF600953A1A /* NetworkService.swift in Sources */,
 				AEEC85691F18B8C600D43B9B /* ViewController.swift in Sources */,
 				AEEC85651F18B8C600D43B9B /* AppDelegate.swift in Sources */,
 				8ECB37091F71500D00F48A4A /* Entities.swift in Sources */,
