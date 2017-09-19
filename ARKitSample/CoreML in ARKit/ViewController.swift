@@ -80,7 +80,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     func getCurrentValue(forSensor: Int) -> String {
         let random = Float(arc4random()) / 0xFFFFFFFF
         let randomTemperature = (random * 6)+17.0 // random temperature between 17 and 23
-        let randomTempString = String(format: "%.2f", randomTemperature)
+        let randomTempString = String(format: "%.2f", randomTemperature) + "°"
         return randomTempString
     }
     
