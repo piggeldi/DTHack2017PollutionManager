@@ -19,6 +19,7 @@
 		AEEC85711F18B8C600D43B9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEC856F1F18B8C600D43B9B /* LaunchScreen.storyboard */; };
 		BFD665C0D00DAD9E206C80EB /* Pods_CoreML_in_ARKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4694EDD40A9D1897D9299567 /* Pods_CoreML_in_ARKitTests.framework */; };
 		E57591981F7155DC00CAF2EB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E518C76A1F7152E000AF3340 /* Extensions.swift */; };
+		E599EFE21F716FB70039A7E6 /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E599EFE11F716FB70039A7E6 /* ServerResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		CAFE266D046E92C88BC655BF /* Pods-CoreML in ARKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreML in ARKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoreML in ARKitTests/Pods-CoreML in ARKitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D9DAA3746D7794722805843E /* Pods_CoreML_in_ARKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreML_in_ARKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E518C76A1F7152E000AF3340 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E599EFE11F716FB70039A7E6 /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
 		FD288A7FF7036097945F0231 /* Pods-CoreML in ARKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreML in ARKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoreML in ARKitTests/Pods-CoreML in ARKitTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +118,7 @@
 				AEEC856F1F18B8C600D43B9B /* LaunchScreen.storyboard */,
 				AEEC85721F18B8C600D43B9B /* Info.plist */,
 				8E9452941F716AF600953A1A /* NetworkService.swift */,
+				E599EFE11F716FB70039A7E6 /* ServerResponse.swift */,
 			);
 			path = "CoreML in ARKit";
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E9452951F716AF600953A1A /* NetworkService.swift in Sources */,
+				E599EFE21F716FB70039A7E6 /* ServerResponse.swift in Sources */,
 				AEEC85691F18B8C600D43B9B /* ViewController.swift in Sources */,
 				AEEC85651F18B8C600D43B9B /* AppDelegate.swift in Sources */,
 				8ECB37091F71500D00F48A4A /* Entities.swift in Sources */,
