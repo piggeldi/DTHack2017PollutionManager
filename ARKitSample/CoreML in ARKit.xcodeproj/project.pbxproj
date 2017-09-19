@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3365C3DE9154C9BDA7198F38 /* Pods_CoreML_in_ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DAA3746D7794722805843E /* Pods_CoreML_in_ARKit.framework */; };
 		8ECB37091F71500D00F48A4A /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB37081F71500D00F48A4A /* Entities.swift */; };
 		8ECB37111F715E3B00F48A4A /* CoordsStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB37101F715E3B00F48A4A /* CoordsStorageTests.swift */; };
 		AEEC85651F18B8C600D43B9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEC85641F18B8C600D43B9B /* AppDelegate.swift */; };
@@ -15,6 +16,7 @@
 		AEEC856C1F18B8C600D43B9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEC856A1F18B8C600D43B9B /* Main.storyboard */; };
 		AEEC856E1F18B8C600D43B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEEC856D1F18B8C600D43B9B /* Assets.xcassets */; };
 		AEEC85711F18B8C600D43B9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEC856F1F18B8C600D43B9B /* LaunchScreen.storyboard */; };
+		BFD665C0D00DAD9E206C80EB /* Pods_CoreML_in_ARKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4694EDD40A9D1897D9299567 /* Pods_CoreML_in_ARKitTests.framework */; };
 		E57591981F7155DC00CAF2EB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E518C76A1F7152E000AF3340 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,10 +31,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3AAF28D13DCD3EB3B72B9416 /* Pods-CoreML in ARKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreML in ARKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoreML in ARKit/Pods-CoreML in ARKit.debug.xcconfig"; sourceTree = "<group>"; };
+		4694EDD40A9D1897D9299567 /* Pods_CoreML_in_ARKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreML_in_ARKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ECB37081F71500D00F48A4A /* Entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
 		8ECB370E1F715E3B00F48A4A /* CoreML in ARKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CoreML in ARKitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ECB37101F715E3B00F48A4A /* CoordsStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordsStorageTests.swift; sourceTree = "<group>"; };
 		8ECB37121F715E3B00F48A4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9157498B395D0E4572FFEFC1 /* Pods-CoreML in ARKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreML in ARKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoreML in ARKit/Pods-CoreML in ARKit.release.xcconfig"; sourceTree = "<group>"; };
 		AEEC85611F18B8C600D43B9B /* CoreML in ARKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoreML in ARKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEEC85641F18B8C600D43B9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEEC85661F18B8C600D43B9B /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -41,7 +46,10 @@
 		AEEC856D1F18B8C600D43B9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEEC85701F18B8C600D43B9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEEC85721F18B8C600D43B9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAFE266D046E92C88BC655BF /* Pods-CoreML in ARKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreML in ARKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoreML in ARKitTests/Pods-CoreML in ARKitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D9DAA3746D7794722805843E /* Pods_CoreML_in_ARKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreML_in_ARKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E518C76A1F7152E000AF3340 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		FD288A7FF7036097945F0231 /* Pods-CoreML in ARKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreML in ARKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoreML in ARKitTests/Pods-CoreML in ARKitTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFD665C0D00DAD9E206C80EB /* Pods_CoreML_in_ARKitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3365C3DE9154C9BDA7198F38 /* Pods_CoreML_in_ARKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +87,8 @@
 				AEEC85631F18B8C600D43B9B /* CoreML in ARKit */,
 				8ECB370F1F715E3B00F48A4A /* CoreML in ARKitTests */,
 				AEEC85621F18B8C600D43B9B /* Products */,
+				E3F4C426C9AE98B0A4407559 /* Pods */,
+				B9E11A4AD966438089836B57 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +117,26 @@
 			path = "CoreML in ARKit";
 			sourceTree = "<group>";
 		};
+		B9E11A4AD966438089836B57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9DAA3746D7794722805843E /* Pods_CoreML_in_ARKit.framework */,
+				4694EDD40A9D1897D9299567 /* Pods_CoreML_in_ARKitTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3F4C426C9AE98B0A4407559 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3AAF28D13DCD3EB3B72B9416 /* Pods-CoreML in ARKit.debug.xcconfig */,
+				9157498B395D0E4572FFEFC1 /* Pods-CoreML in ARKit.release.xcconfig */,
+				CAFE266D046E92C88BC655BF /* Pods-CoreML in ARKitTests.debug.xcconfig */,
+				FD288A7FF7036097945F0231 /* Pods-CoreML in ARKitTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -112,9 +144,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8ECB37171F715E3B00F48A4A /* Build configuration list for PBXNativeTarget "CoreML in ARKitTests" */;
 			buildPhases = (
+				2C883578AD8BC21A5B2AD666 /* [CP] Check Pods Manifest.lock */,
 				8ECB370A1F715E3B00F48A4A /* Sources */,
 				8ECB370B1F715E3B00F48A4A /* Frameworks */,
 				8ECB370C1F715E3B00F48A4A /* Resources */,
+				53740C97D3E455F9A4435936 /* [CP] Embed Pods Frameworks */,
+				72C332DFA908790CE831AE31 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,9 +165,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AEEC85751F18B8C600D43B9B /* Build configuration list for PBXNativeTarget "CoreML in ARKit" */;
 			buildPhases = (
+				0179F9EB0BA19B93CE736D90 /* [CP] Check Pods Manifest.lock */,
 				AEEC855D1F18B8C600D43B9B /* Sources */,
 				AEEC855E1F18B8C600D43B9B /* Frameworks */,
 				AEEC855F1F18B8C600D43B9B /* Resources */,
+				5CE25EB64F25B15101BE202C /* [CP] Embed Pods Frameworks */,
+				1840E94C64A8CD2D2359AA22 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,6 +241,108 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0179F9EB0BA19B93CE736D90 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoreML in ARKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1840E94C64A8CD2D2359AA22 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoreML in ARKit/Pods-CoreML in ARKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C883578AD8BC21A5B2AD666 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoreML in ARKitTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53740C97D3E455F9A4435936 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoreML in ARKitTests/Pods-CoreML in ARKitTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5CE25EB64F25B15101BE202C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CoreML in ARKit/Pods-CoreML in ARKit-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoreML in ARKit/Pods-CoreML in ARKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72C332DFA908790CE831AE31 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoreML in ARKitTests/Pods-CoreML in ARKitTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8ECB370A1F715E3B00F48A4A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -255,6 +395,7 @@
 /* Begin XCBuildConfiguration section */
 		8ECB37151F715E3B00F48A4A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAFE266D046E92C88BC655BF /* Pods-CoreML in ARKitTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -271,6 +412,7 @@
 		};
 		8ECB37161F715E3B00F48A4A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD288A7FF7036097945F0231 /* Pods-CoreML in ARKitTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -394,6 +536,7 @@
 		};
 		AEEC85761F18B8C600D43B9B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AAF28D13DCD3EB3B72B9416 /* Pods-CoreML in ARKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Q4KX3AF4JW;
@@ -408,6 +551,7 @@
 		};
 		AEEC85771F18B8C600D43B9B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9157498B395D0E4572FFEFC1 /* Pods-CoreML in ARKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Q4KX3AF4JW;
