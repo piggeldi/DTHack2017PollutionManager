@@ -13,9 +13,9 @@ struct DeviceData: Codable {
     let deviceId: String
     let deviceName: String
     let deviceType: String
-    let deviceTags: String
-    let deviceMessage: [DeviceMessage]
-    let timestamp: Date
+    let deviceTags: [String]
+    let deviceMessage: DeviceMessage
+    let timestamp: String
 }
 
 struct DeviceMessage: Codable {
