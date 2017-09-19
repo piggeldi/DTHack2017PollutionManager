@@ -76,7 +76,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     func getCurrentValue(forSensor: Int) -> String {
         let random = Float(arc4random()) / 0xFFFFFFFF
         let randomTemperature = (random * 6)+17.0 // random temperature between 17 and 23
-        let randomTempString = String(format: "%.2f", randomTemperature) + "° 😎"
+        let randomTempString = String(format: "%.2f", randomTemperature)
         return randomTempString
     }
     
@@ -124,7 +124,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             let worldCoord : SCNVector3 = SCNVector3Make(transform.columns.3.x, transform.columns.3.y, transform.columns.3.z)
             
             // Create 3D Text
-            let node : SCNNode = createNewBubbleParentNode("19,5°")
+            let node : SCNNode = createNewBubbleParentNode("")
             sceneView.scene.rootNode.addChildNode(node)
             node.position = worldCoord
         }
@@ -143,7 +143,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         font = font?.withTraits(traits: .traitBold)
         bubble.font = font
         bubble.alignmentMode = kCAAlignmentCenter
-        bubble.firstMaterial?.diffuse.contents = UIColor.orange
+        bubble.firstMaterial?.diffuse.contents = UIColor.telekomColor()
         bubble.firstMaterial?.specular.contents = UIColor.white
         bubble.firstMaterial?.isDoubleSided = true
         // bubble.flatness // setting this too low can cause crashes.
@@ -159,7 +159,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // CENTRE POINT NODE
         let sphere = SCNSphere(radius: 0.005)
-        sphere.firstMaterial?.diffuse.contents = UIColor.cyan
+        sphere.firstMaterial?.diffuse.contents = UIColor.black
         let sphereNode = SCNNode(geometry: sphere)
         
         // BUBBLE PARENT NODE

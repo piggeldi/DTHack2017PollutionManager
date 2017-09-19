@@ -27,16 +27,26 @@ class CoordStorage {
     let userDefaultsKey = "coordinatesStore"
     
     func fetchAll() -> DeviceCoords? {
-        let jsonEncodedData = UserDefaults.standard.string(forKey: userDefaultsKey)
-        return nil
+        let decoder = JSONDecoder()
+        guard let JSONString = UserDefaults.standard.string(forKey: userDefaultsKey),
+            let JSONData = JSONString.data(using: .utf8),
+            let coords = try? decoder.decode(DeviceCoords.self, from: JSONData) else {
+            return nil
+        }
+        return coords
     }
     
     func add(coord: DeviceCoord) {
-        
-        
+        var deviceCoords = fetchAll() ?? []
+        deviceCoords.append(coord)
+        let encoder = JSONEncoder()
+        let JSONString = try? encoder.encode(deviceCoords)
+        UserDefaults.standard.set(JSONString, forKey: userDefaultsKey)
+        UserDefaults.standard.synchronize()
     }
     
     func remove(coord: DeviceCoord) {
+        
         
     }
 }
