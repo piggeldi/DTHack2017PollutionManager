@@ -22,7 +22,7 @@ struct DeviceMessage: Codable {
     let move: Int?
     let temp: Int?
     let vol: Int?
-    let licht: Int?
+    let light: Int?
 }
 
 // Result Example
