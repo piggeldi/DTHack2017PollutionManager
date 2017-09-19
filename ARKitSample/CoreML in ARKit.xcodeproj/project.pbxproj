@@ -14,6 +14,7 @@
 		AEEC856C1F18B8C600D43B9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEC856A1F18B8C600D43B9B /* Main.storyboard */; };
 		AEEC856E1F18B8C600D43B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEEC856D1F18B8C600D43B9B /* Assets.xcassets */; };
 		AEEC85711F18B8C600D43B9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEC856F1F18B8C600D43B9B /* LaunchScreen.storyboard */; };
+		E518C76B1F7152E000AF3340 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E518C76A1F7152E000AF3340 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		AEEC856D1F18B8C600D43B9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEEC85701F18B8C600D43B9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEEC85721F18B8C600D43B9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E518C76A1F7152E000AF3340 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				AEEC85641F18B8C600D43B9B /* AppDelegate.swift */,
+				E518C76A1F7152E000AF3340 /* Extensions.swift */,
 				AEEC85661F18B8C600D43B9B /* art.scnassets */,
 				AEEC85681F18B8C600D43B9B /* ViewController.swift */,
 				AEEC856A1F18B8C600D43B9B /* Main.storyboard */,
@@ -145,6 +148,7 @@
 				AEEC85691F18B8C600D43B9B /* ViewController.swift in Sources */,
 				AEC748F51F18C24700334D87 /* Inceptionv3.mlmodel in Sources */,
 				AEEC85651F18B8C600D43B9B /* AppDelegate.swift in Sources */,
+				E518C76B1F7152E000AF3340 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
