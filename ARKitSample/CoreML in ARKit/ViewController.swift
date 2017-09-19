@@ -21,6 +21,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var sceneView: ARSCNView!
     let bubbleDepth : Float = 0.01 // the 'depth' of 3D text
     var latestPrediction : String = "…" // a variable containing the latest CoreML prediction
+    private let networkService = DeviceNetworkService()
     
     // COREML
     var visionRequests = [VNRequest]()
@@ -48,6 +49,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Tap Gesture Recognizer
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(gestureRecognize:)))
         view.addGestureRecognizer(tapGesture)
+        
+        networkService.fetchData(for: "")
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

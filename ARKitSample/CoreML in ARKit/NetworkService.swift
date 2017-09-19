@@ -13,14 +13,21 @@ final class DeviceNetworkService {
     
     func fetchData(for device: String) {
         
-        Alamofire.request(Endpoint.Device1)
-        
-        
+        Alamofire.request(Endpoint.Device1).responseJSON { (jsonResponse) in
+            
+            switch jsonResponse.result {
+                case .success(let JSON):
+                    let response = jsonResponse.result.value as? [String: Any]
+                    print("foundData")
+                case .failure(let error):
+                    print(error.localizedDescription)
+            }
+        }
     }
 }
 
 
-enum Endpoint: URLConvertible {
+enum Endpoint: URLConvertible, URLRequestConvertible {
     
     case Device1
     case Device2
@@ -57,9 +64,18 @@ enum Endpoint: URLConvertible {
     }
     
     func asURL() throws -> URL {
-        var urlComponents = URLComponents()
-        urlComponents.host = self.host
+        var urlComponents = URLComponents(string: self.host)!
         urlComponents.path = self.path
         return try urlComponents.asURL()
+    }
+    
+    func asURLRequest() throws -> URLRequest {
+        var request = URLRequest(url: try self.asURL())
+        request.setValue("Bearer \(self.token)", forHTTPHeaderField: "Authorization")
+        
+        let encoding = URLEncoding(destination: .queryString)
+        
+        // create a URLRequest with encoded parameters
+        return try encoding.encode(request, with: nil)
     }
 }
