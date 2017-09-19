@@ -49,6 +49,21 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Tap Gesture Recognizer
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(gestureRecognize:)))
         view.addGestureRecognizer(tapGesture)
+        
+        //////////////////////////////////////////////////
+        
+        // Set up Vision Model
+        guard let inceptionV3Model = try? VNCoreMLModel(for: Inceptionv3().model) else {
+            fatalError("Could not load model. Ensure model has been drag and dropped (copied) to XCode Project from https://developer.apple.com/machine-learning/")
+        }
+        
+        // Set up Vision-CoreML Request
+        let classificationRequest = VNCoreMLRequest(model: inceptionV3Model, completionHandler: classificationCompleteHandler)
+        classificationRequest.imageCropAndScaleOption = VNImageCropAndScaleOption.centerCrop // Crop from centre of images and scale to appropriate size.
+        visionRequests = [classificationRequest]
+        
+        // Begin Loop to Update CoreML
+        loopCoreMLUpdate()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,10 +84,19 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     @objc func updateMeasures() {
-        for sceneText in bubbles {
-            sceneText.string = timer?.fireDate.description
-        }
+        for x in 0..<bubbles.count {
+            bubbles[x].string = getCurrentValue(forSensor: x)
+        } 
     }
+
+    func getCurrentValue(forSensor: Int) -> String {
+        let random = Float(arc4random()) / 0xFFFFFFFF
+        let randomTemperature = (random * 6)+17.0 // random temperature between 17 and 23
+        let randomTempString = String(format: "%.2f", randomTemperature) + "° 😎"
+        return randomTempString
+    }
+    
+    
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -114,6 +138,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             // Get Coordinates of HitTest
             let transform : matrix_float4x4 = closestResult.worldTransform
             let worldCoord : SCNVector3 = SCNVector3Make(transform.columns.3.x, transform.columns.3.y, transform.columns.3.z)
+            
             // Create 3D Text
             let node : SCNNode = createNewBubbleParentNode("19,5°")
             sceneView.scene.rootNode.addChildNode(node)
@@ -161,6 +186,82 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         bubbles.append(bubble)
         return bubbleNodeParent
+    }
+    
+    // MARK: - CoreML Vision Handling
+    
+    func loopCoreMLUpdate() {
+        // Continuously run CoreML whenever it's ready. (Preventing 'hiccups' in Frame Rate)
+        
+        dispatchQueueML.async {
+            // 1. Run Update.
+            self.updateCoreML()
+            
+            // 2. Loop this function.
+            self.loopCoreMLUpdate()
+        }
+        
+    }
+    
+    func classificationCompleteHandler(request: VNRequest, error: Error?) {
+        // Catch Errors
+        if error != nil {
+            print("Error: " + (error?.localizedDescription)!)
+            return
+        }
+        guard let observations = request.results else {
+            print("No results")
+            return
+        }
+        
+        // Get Classifications
+        let classifications = observations[0...1] // top 2 results
+            .flatMap({ $0 as? VNClassificationObservation })
+            .map({ "\($0.identifier) \(String(format:"- %.2f", $0.confidence))" })
+            .joined(separator: "\n")
+        
+        
+        DispatchQueue.main.async {
+            // Print Classifications
+            print(classifications)
+            print("--")
+            
+            // Display Debug Text on screen
+            var debugText:String = ""
+            debugText += classifications
+            self.debugTextView.text = debugText
+            
+            // Store the latest prediction
+            var objectName:String = "…"
+            objectName = classifications.components(separatedBy: "-")[0]
+            objectName = objectName.components(separatedBy: ",")[0]
+            self.latestPrediction = objectName
+            
+        }
+    }
+    
+    func updateCoreML() {
+        ///////////////////////////
+        // Get Camera Image as RGB
+        let pixbuff : CVPixelBuffer? = (sceneView.session.currentFrame?.capturedImage)
+        if pixbuff == nil { return }
+        let ciImage = CIImage(cvPixelBuffer: pixbuff!)
+        // Note: Not entirely sure if the ciImage is being interpreted as RGB, but for now it works with the Inception model.
+        // Note2: Also uncertain if the pixelBuffer should be rotated before handing off to Vision (VNImageRequestHandler) - regardless, for now, it still works well with the Inception model.
+        
+        ///////////////////////////
+        // Prepare CoreML/Vision Request
+        let imageRequestHandler = VNImageRequestHandler(ciImage: ciImage, options: [:])
+        // let imageRequestHandler = VNImageRequestHandler(cgImage: cgImage!, orientation: myOrientation, options: [:]) // Alternatively; we can convert the above to an RGB CGImage and use that. Also UIInterfaceOrientation can inform orientation values.
+        
+        ///////////////////////////
+        // Run Image Request
+        do {
+            try imageRequestHandler.perform(self.visionRequests)
+        } catch {
+            print(error)
+        }
+        
     }
 }
 
