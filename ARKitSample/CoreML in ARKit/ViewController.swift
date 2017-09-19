@@ -84,10 +84,19 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     @objc func updateMeasures() {
-        for sceneText in bubbles {
-            sceneText
-        }
+        for x in 0..<bubbles.count {
+            bubbles[x].string = getCurrentValue(forSensor: x)
+        } 
     }
+
+    func getCurrentValue(forSensor: Int) -> String {
+        let random = Float(arc4random()) / 0xFFFFFFFF
+        let randomTemperature = (random * 6)+17.0 // random temperature between 17 and 23
+        let randomTempString = String(format: "%.2f", randomTemperature) + "° 😎"
+        return randomTempString
+    }
+    
+    
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
